@@ -291,6 +291,7 @@
                         <div>
                             <h4>Phone</h4>
                             <p>+91 91514 12157</p>
+                            <p>+91 63098 26939</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -302,18 +303,36 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="Your Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary">Send Message</button>
+                    <form
+                            action="https://docs.google.com/forms/d/e/1FAIpQLSeL2l2q-6sxzbJ4km7N31E7XN3Em4UaCqk0AC1bXYdk6qnhSw/formResponse"
+                            method="POST"
+                            target="hidden_iframe"
+                            onsubmit="submitted=true;">
+
+                           <div class="form-group">
+                               <input name="entry.1945967387" type="text" placeholder="Your Name" required>
+                           </div>
+                           <div class="form-group">
+                               <input name="entry.1272204009" type="email" placeholder="Your Email" required>
+                           </div>
+                           <div class="form-group">
+                               <textarea name="entry.363463434" placeholder="Your Message" rows="5" required></textarea>
+                           </div>
+                               <button type="submit" class="btn-primary">Send Message</button>
                     </form>
+
+                     <!-- Hidden iframe to prevent redirect to Google Forms -->
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) showThankYou();"></iframe>
+
+                    <script>
+                    let submitted = false;
+                    function showThankYou() {
+                        alert("✅ Thank you! Your message has been sent successfully.");
+                        submitted = false;
+                     }
+                    </script>
+
+
                 </div>
             </div>
         </div>
@@ -356,12 +375,13 @@
                     <ul>
                         <li><i class="fas fa-envelope"></i> support@cybershield.ai</li>
                         <li><i class="fas fa-phone"></i> +91 91514 12157</li>
+                        <li><i class="fas fa-phone"></i> +91 63098 26939</li>
                         <li><i class="fas fa-map-marker-alt"></i> Lucknow, India</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 CyberShield AI. All rights reserved. | Protecting the Digital Frontier</p>
+                <p>&copy; 2025 CyberShield AI. All rights reserved. | Protecting the Digital Frontier</p>
             </div>
         </div>
     </footer>

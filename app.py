@@ -8,9 +8,9 @@ app = Flask(__name__)
 # (Make sure spam_detector_pipeline.joblib is in the same folder as this file)
 try:
     model = joblib.load("spam_detector_pipeline.joblib")
-    print("✅ Model loaded successfully")
+    print(" Model loaded successfully")
 except Exception as e:
-    print("❌ Error loading model:", e)
+    print(" Error loading model:", e)
 
 @app.route("/")
 def home():
